@@ -1,7 +1,12 @@
 // Print 1-255
 // print1To255()
 // Print all the integers from 1 to 255.
-
+function printingARange(){
+  for (var i = 0; i < 256; i++) {
+    console.log(i)
+  }
+}
+printingARange()
 // **************************************
 // Print Ints and Sum 0-255
 // printIntsAndSum0To255()
