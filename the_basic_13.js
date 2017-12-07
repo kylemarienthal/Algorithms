@@ -9,9 +9,16 @@ function printingARange(){
 printingARange()
 // **************************************
 // Print Ints and Sum 0-255
-// printIntsAndSum0To255()
 // Print integers from 0 to 255, and with each integer print the sum so far.
-//
+function printIntsAndSum0To255(){
+  let sum = 0;
+  for (var i = 0; i < 256; i++) {
+    console.log("i: ",i);
+    console.log("sum: ",sum += i);
+  }
+}
+printIntsAndSum0To255()
+
 // **************************************
 // Print Max of Array
 // printMaxOfArray(arr)
