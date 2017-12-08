@@ -35,8 +35,17 @@ printMaxOfArray([1,2,3,4,5,6,7,8,9,1,2,3,4,5])
 
 // **************************************
 // Return Odds Array 1-255
-// returnOddsArray1To255()
 // Create an array with all the odd integers between 1 and 255 (inclusive).
+function returnOddsArray1To255(){
+  var arr = [];
+  for(var i = 0; i < 256; i++ ){
+    if(i % 2 !== 0){
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+returnOddsArray1To255()
 //
 // **************************************
 // Return Array Count Greater than Y
