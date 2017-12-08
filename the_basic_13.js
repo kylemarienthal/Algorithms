@@ -21,9 +21,18 @@ printIntsAndSum0To255()
 
 // **************************************
 // Print Max of Array
-// printMaxOfArray(arr)
 // Given an array, find and print its largest element.
-//
+function printMaxOfArray(arr){
+  var current = arr[1];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > current){
+      current = arr[i];
+    }
+  }
+  return current;
+}
+printMaxOfArray([1,2,3,4,5,6,7,8,9,1,2,3,4,5])
+
 // **************************************
 // Return Odds Array 1-255
 // returnOddsArray1To255()
