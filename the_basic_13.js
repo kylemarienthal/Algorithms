@@ -91,9 +91,17 @@ printMaxMinAverageArrayVals([1,2,3,4,5,6,7,8,9,1,2,3,4,5])
 //
 // **************************************
 // Swap String for Array Negative Values
-// swapStringForArrayNegativeVals(arr)
 // Given an array of numbers, replace any negative values with the string 'Dojo'.
 // 7
+function swapStringForArrayNegativeVals(arr){
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] < 0){
+      arr[i] = "Dojo";
+    }
+  }
+  return arr;
+}
+swapStringForArrayNegativeVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Print Odds 1-255
