@@ -105,9 +105,14 @@ swapStringForArrayNegativeVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Print Odds 1-255
-// printOdds1To255()
 // Print all odd integers from 1 to 255.
 // 8
+function printOdds1To255(){
+  for(var i = 1; i <= 255; i+=2){
+    console.log(i)
+  }
+}
+printOdds1To255()
 //
 // **************************************
 // Print Array Values
@@ -117,9 +122,16 @@ swapStringForArrayNegativeVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Print Average of Array
-// printAverageOfArray(arr)
 // Analyze an array’s values and print the average.
 // 10
+function printAverageOfArray(array){
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum / array.length;
+}
+printAverageOfArray([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Square Array Values
