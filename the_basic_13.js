@@ -116,9 +116,14 @@ printOdds1To255()
 //
 // **************************************
 // Print Array Values
-// printArrayVals(arr)
 // Iterate through a given array, printing each value.
 // 9
+function printArrayVals(array){
+  for (var i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+printArrayVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Print Average of Array
