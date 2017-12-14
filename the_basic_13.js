@@ -140,9 +140,17 @@ printAverageOfArray([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Square Array Values
-// squareArrayVals(arr)
 // Square each value in a given array, returning that same array with changed values.
 // 11
+function squareArrayVals(array){
+  for (var i = 0; i < array.length; i++) {
+  	console.log(array[i]);
+    array[i] = Math.pow(array[i], 2);
+    console.log(array[i]);
+  }
+  return array;
+}
+squareArrayVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 //
 // **************************************
 // Zero Out Array Negative Numbers
