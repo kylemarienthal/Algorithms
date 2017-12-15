@@ -1,4 +1,5 @@
 let array = [1,2,3,4,5,6,7,8,9,1,2,-3,4,5];
+
 // Print 1-255
 // print1To255()
 // Print all the integers from 1 to 255.
@@ -167,6 +168,13 @@ zeroOutArrayNegativeVals(array)
 
 // **************************************
 // Shift Array Values Left
-// shiftArrayValsLeft(arr)
 // Given an array, move all values forward (to the left) by one index, dropping the first value and leaving a 0 (zero) value at the end of the array.
 // 13
+function shiftArrayValsLeft(arr){
+  for (var i = 0; i < arr.length; i++) {
+  	arr[i] = arr[i + 1]
+  }
+  arr[arr.length-1] = 0;
+  return arr;
+}
+shiftArrayValsLeft(arr)
