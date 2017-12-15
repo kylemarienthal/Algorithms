@@ -1,3 +1,4 @@
+let array = [1,2,3,4,5,6,7,8,9,1,2,-3,4,5];
 // Print 1-255
 // print1To255()
 // Print all the integers from 1 to 255.
@@ -34,7 +35,7 @@ function printMaxOfArray(arr){
   }
   return current;
 }
-printMaxOfArray([1,2,3,4,5,6,7,8,9,1,2,3,4,5])
+printMaxOfArray(array)
 
 // **************************************
 // Return Odds Array 1-255
@@ -65,7 +66,7 @@ function returnArrayCountGreaterThanY(arr, y){
   }
   return count;
 }
-returnArrayCountGreaterThanY([1,2,3,4,5,6,7,8,9,1,2,3,4,5], 7)
+returnArrayCountGreaterThanY(array, 7)
 //
 // **************************************
 // Print Max, Min, Average Array Values
@@ -86,7 +87,7 @@ function printMaxMinAverageArrayVals(arr){
   console.log(min)
   console.log(avg)
 }
-printMaxMinAverageArrayVals([1,2,3,4,5,6,7,8,9,1,2,3,4,5])
+printMaxMinAverageArrayVals(array)
 
 //
 // **************************************
@@ -101,7 +102,7 @@ function swapStringForArrayNegativeVals(arr){
   }
   return arr;
 }
-swapStringForArrayNegativeVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
+swapStringForArrayNegativeVals(array)
 //
 // **************************************
 // Print Odds 1-255
@@ -123,7 +124,7 @@ function printArrayVals(array){
     console.log(array[i]);
   }
 }
-printArrayVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
+printArrayVals(array)
 //
 // **************************************
 // Print Average of Array
@@ -136,7 +137,7 @@ function printAverageOfArray(array){
   }
   return sum / array.length;
 }
-printAverageOfArray([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
+printAverageOfArray(array)
 //
 // **************************************
 // Square Array Values
@@ -144,19 +145,25 @@ printAverageOfArray([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
 // 11
 function squareArrayVals(array){
   for (var i = 0; i < array.length; i++) {
-  	console.log(array[i]);
     array[i] = Math.pow(array[i], 2);
-    console.log(array[i]);
   }
   return array;
 }
-squareArrayVals([1,2,3,4,5,6,7,8,9,1,2,-3,4,5])
+squareArrayVals(array)
 //
 // **************************************
 // Zero Out Array Negative Numbers
-// zeroOutArrayNegativeVals(arr)
 // Return the given array, after setting any negative values to zero.
 // 12
+function zeroOutArrayNegativeVals(array){
+  for (var i = 0; i < array.length; i++) {
+    if(array[i] < 0){
+      array[i] = 0;
+    }
+  }
+  return array;
+}
+zeroOutArrayNegativeVals(array)
 
 // **************************************
 // Shift Array Values Left
