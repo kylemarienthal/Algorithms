@@ -33,10 +33,13 @@ var str = '';
 for (var i = 0; i < 76; i++) {
   if(i <= 25 || i > 50){
     str += ' ';
+  }else if(i > num){
+    str += ' ';
   }else{
-    str += '*';
+  	str += '*';
   }
 }
 console.log(str);
 }
+drawCenteredStars(5);
 // (optional) Create epic text-art Empire vs. Rebellion battle scenes, with ships like (=*=)and >o<.
