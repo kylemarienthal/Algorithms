@@ -31,15 +31,19 @@ function drawRightStars(num){
 function drawCenteredStars(num){
 var str = '';
 for (var i = 0; i < 76; i++) {
-  if(i <= 25 || i > 50){
-    str += ' ';
-  }else if(i > num){
-    str += ' ';
-  }else{
-  	str += '*';
+  if(i <= 25){
+  	str += ' ';
+  }
+  else if(i > 25 && i <= 50){
+  	for(var j = 0; j < num; j++){
+  		str += '*';
+  	}
+  }
+  else if(i > 50){
+  	str += ' ';
   }
 }
 console.log(str);
 }
-drawCenteredStars(5);
+drawCenteredStars();
 // (optional) Create epic text-art Empire vs. Rebellion battle scenes, with ships like (=*=)and >o<.
