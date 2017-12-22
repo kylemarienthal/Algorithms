@@ -28,21 +28,20 @@ function drawRightStars(num){
 }
 // Write function drawCenteredStars(num) that prints 75 characters total. The stars should be centered in the 75. The middle num characters should be asterisks; the rest of the 75 spaces.
 
-function drawCenteredStars(num){
-var str = '';
-for (var i = 0; i < 76; i++) {
-  if(i <= 25){
-  	str += ' ';
-  }
-  else if(i > 25 && i <= 50){
-  	for(var j = 0; j < num; j++){
-  		str += '*';
-  	}
-  }
-  else if(i > 50){
-  	str += ' ';
-  }
+function printSpaces(){
+	var str = '';
+	for(var i = 0; i < 26; i++){
+		str += ' ';
+	}
+	console.log(str);
 }
+function drawCenteredStars(num){
+	var str = '';
+	printSpaces();
+	for (var i = 0; i < 26; i++) {
+  	str += '*';
+  }
+  printSpaces();
 console.log(str);
 }
 drawCenteredStars();
