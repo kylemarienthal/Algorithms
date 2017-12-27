@@ -65,3 +65,17 @@ function drawLeftChars(num, char){
   console.log(str);
 
 }
+
+function drawRightChars(num, char){
+    var str = '';
+    var star = 75 - num;
+    for(var i = 0; i < 76; i++){
+
+      if(i <= star){
+        str += ' ';
+      }else{
+        str += "*";
+      }
+    }
+    console.log(str);
+}
