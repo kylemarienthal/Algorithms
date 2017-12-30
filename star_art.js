@@ -74,8 +74,10 @@ function drawRightChars(num, char){
       if(i <= star){
         str += ' ';
       }else{
-        str += "*";
+        str += char;
       }
     }
     console.log(str);
 }
+
+drawRightChars(5, l);
