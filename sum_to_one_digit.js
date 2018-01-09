@@ -4,11 +4,11 @@
 
 //use % 10 for the length of num after each iteration
 function sumToOne(num){
-  if(sum1.length === 1){
-    return sum1;
+  if(num < 10){
+    return num;
   }
-  for(var i = 0; i < sum1.length; i++){
-        sum1 += sum1[i];
+  for(var i = 0; i < num.length; i++){
+        num += num[i];
       }
-  sumToOne(sum1);
+  sumToOne(num);
 }
