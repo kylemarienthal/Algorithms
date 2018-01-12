@@ -3,6 +3,7 @@
 //
 // Second: also calculate and print degrees for an additional “week hand” that rotates once each week.
 
-clockHandAngles(seconds){
-  
+function clockHandAngles(seconds){
+  var days, hrs, secs, halfsies;
+
 }
