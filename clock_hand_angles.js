@@ -5,5 +5,6 @@
 
 function clockHandAngles(seconds){
   var days, hrs, secs, halfsies;
+  if(seconds === 0){return "Hour hand:0 degrees, Minute Hand:0 degrees, Second Hand:0 degrees"}
 
 }
