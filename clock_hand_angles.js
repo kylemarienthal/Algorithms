@@ -6,5 +6,15 @@
 function clockHandAngles(seconds){
   var days, hrs, secs, halfsies;
   if(seconds === 0){return "Hour hand:0 degrees, Minute Hand:0 degrees, Second Hand:0 degrees"}
+  else if(seconds > 86400){
+    days = Math.floor(seconds/86400);
+    hrs = seconds - (days * 86400);
+  }
+  else if(seconds <= 86400 && seconds > 43200){
+    halfsies = seconds - (Math.floor(seconds/43200) * 43200);
+  }
+  else if(seconds <= 43200{
+    
+  })
 
 }
