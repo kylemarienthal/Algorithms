@@ -14,7 +14,8 @@ function clockHandAngles(seconds){
     halfsies = seconds - (Math.floor(seconds/43200) * 43200);
   }
   else if(seconds <= 43200){
-    hrs = seconds - 
+    hrs = Math.floor(seconds / 60);
+    secs = seconds - (Math.floor(seconds/43200))
   })
 
 }
