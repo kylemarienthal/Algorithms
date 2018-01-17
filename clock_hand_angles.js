@@ -4,7 +4,7 @@
 // Second: also calculate and print degrees for an additional “week hand” that rotates once each week.
 
 function clockHandAngles(seconds){
-  var days, hrs, secs, halfsies;
+  var days, hrs, secs, mins, halfsies;
   if(seconds === 0){return "Hour hand:0 degrees, Minute Hand:0 degrees, Second Hand:0 degrees"}
   else if(seconds > 86400){
     days = Math.floor(seconds/86400);
@@ -14,7 +14,8 @@ function clockHandAngles(seconds){
     halfsies = seconds - (Math.floor(seconds/43200) * 43200);
   }
   else if(seconds <= 43200){
-    hrs = Math.floor(seconds / 60);
+    hrs = Math.floor(seconds / 3600);
+
     secs = seconds - (Math.floor(seconds/43200))
   })
 
