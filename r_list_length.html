@@ -1,0 +1,16 @@
+<!-- rListLength
+
+Given the first node of a singly linked list, create a recursive function that returns the number of nodes in that list. You can assume the list contains no loops, and that it is short enough that you will not ‘blow your stack’. -->
+<script>
+  function rListLength(node){
+    if(!node){ return 0; }
+    if(node.next === null){return 1;}
+    var count = 0;
+    if(node.next){
+      return rListLength(node.next);
+    }
+  }
+
+
+
+</script>
