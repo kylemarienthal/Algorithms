@@ -1,0 +1,44 @@
+<script>
+  // object constructors (classes)
+
+  function dList(){
+    this.head = null;
+    this.tail = null;
+  }
+  function dLNode(val){
+    this.val = val;
+    this.next = null;
+    this.prev = null;
+  }
+
+  function prependValue(list, newVal, mark){
+    if(!list){
+      throw "Error 123";
+    }
+    var newNode = new dLNode(newVal);
+    if (!list.head) {
+      list.head = newNode;
+      list.tail = newNode;
+    } else if(list.head.val === mark){
+      var temp = list.head;
+      list.head = newNode;
+      newNode.next = temp;
+      temp.prev = newNode;
+    } else {
+      var current = list.head;
+      while (current.next){
+        if(current.next.val === mark){
+          var temp = current.next;
+          current.next = newNode;
+          temp.prev = newNode;
+          newNode.prev = current;
+          newNode.next = temp;
+          return true;
+        }
+        current = current.next;
+      }
+      return false;
+    }
+    return true;
+  }
+</script>
