@@ -1,0 +1,65 @@
+<script type="text/javascript">
+
+function SLNode(value){
+  this.val = value;
+  this.next = null;
+}
+
+function SLQueue(){
+  this.head = null;
+  // var tail = null;
+  // a function that adds the given value to the end of the queue
+  this.enqueue = function(val){
+    var node = new Node(val);
+    if(this.head == null){
+      this.head = node;
+    }
+    var runner = this.head;
+    while (runner.next) {
+      runner = runner.next;
+    }
+    runner.next = node;
+  }
+  // a function that removes and returns the value at the front of the queue
+  this.dequeue = function(val){
+    if (this.head) {
+      return this.head;
+    }
+    var value = this.head.value;
+    this.head = this.head.next;
+    return value;
+  }
+  // a function that returns the value at the front of the queue w/o removing it
+  this.front = function(){
+    if(this.head == null){
+      return null;
+    }
+    return this.head.val;
+  }
+  // a function that returns whether a given value is found in the queue
+  this.contains = function(val){
+    if(this.head == null){
+      return false;
+    }
+    var runner = this.head;
+    while (runner.next) {
+      if(runner.val === val){
+        return true;
+      }
+      runner = runner.next;
+    }
+    return false;
+  }
+  // a function that returns whether the queue contains no values
+  this.isEmpty = function(){
+    if(this.head == null){
+      return true;
+    }
+    return false;
+  }
+
+
+
+
+}
+  </script>
