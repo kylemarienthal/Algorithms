@@ -56,7 +56,22 @@ function SLQueue(){
       return true;
     }
     return false;
+
   }
+
+  this.size = function() {
+    if(this.head == null){
+      return 0;
+    }
+    var count = 0;
+    var runner = this.head;
+    while (runner){
+      count++;
+      runner = runner.next;
+    }
+    return count;
+  }
+
 
 
 
