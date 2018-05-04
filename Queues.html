@@ -21,7 +21,7 @@ function SLQueue(){
     runner.next = node;
   }
   // a function that removes and returns the value at the front of the queue
-  this.dequeue = function(val){
+  this.dequeue = function(){
     if (this.head) {
       return this.head;
     }
@@ -79,9 +79,19 @@ function SLQueue(){
     var newQueue = new Queue();
     var length = this.size();
     var arr = [];
-    for (var i = 0; i < array.length; i++) {
-      array[i]
+    var idx = 0
+    for (var i = 0; i < Math.ceil(length/2); i++) {
+      arr.push(Queue.dequeue());
     }
+    for (var i = 0; i < length; i++) {
+      if(i % 2 == 0){
+        newQueue.enqueue(arr[idx])
+        idx++;
+      }else{
+        newQueue.enqueue(Queue.dequeue());
+      }
+    }
+    return newQueue;
   }
 
 
